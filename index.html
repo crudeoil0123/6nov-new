@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="MCX Commodity Official — MCX commodity market research, technical observations and market updates.">
+  <title>MCX Commodity Official™ | Market Research & Insights</title>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1167013652526372');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1167013652526372&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+    :root {
+      --bg: #070b14;
+      --panel: rgba(15, 24, 42, .78);
+      --gold: #e7bd67;
+      --gold2: #fff0bd;
+      --blue: #4c9dff;
+      --text: #f4f6fb;
+      --muted: #aab5c8;
+      --line: rgba(231,189,103,.22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text); background:
+        radial-gradient(ellipse at 15% 10%, rgba(31,94,164,.22), transparent 38%),
+        radial-gradient(ellipse at 85% 22%, rgba(180,128,43,.13), transparent 35%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .13;
+      background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 54px 54px; mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; position: relative; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:25px 0; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text); }
+    .logo {
+      width:43px; height:43px; border:1px solid rgba(231,189,103,.65); border-radius:13px;
+      display:grid; place-items:center; color:var(--gold2); font-weight:900; letter-spacing:-2px;
+      background:linear-gradient(145deg, rgba(231,189,103,.2), rgba(76,157,255,.12));
+      box-shadow:0 0 25px rgba(231,189,103,.12), inset 0 0 15px rgba(231,189,103,.08);
+      animation: glow 3s ease-in-out infinite;
+    }
+    .brand-name { font-size:13px; font-weight:850; letter-spacing:1.25px; line-height:1.3; }
+    .brand-name span { color:var(--gold); }
+    .top-tag { color:var(--muted); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; }
+    .status { border:1px solid rgba(76,157,255,.28); border-radius:999px; padding:9px 13px; color:#b9d9ff; font-size:11px; letter-spacing:1px; }
+    .status i { display:inline-block; width:6px; height:6px; background:#61d69a; border-radius:50%; margin:0 7px 1px 0; box-shadow:0 0 10px #61d69a; }
+    main { padding:48px 0 72px; }
+    .hero { text-align:center; max-width:850px; margin:0 auto; }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:9px; border:1px solid var(--line);
+      border-radius:999px; padding:9px 15px; color:var(--gold2); font-size:10px;
+      font-weight:750; letter-spacing:2px; background:rgba(231,189,103,.055);
+    }
+    .eyebrow::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--gold); box-shadow:0 0 12px var(--gold); }
+    h1 { font-size:clamp(38px, 7vw, 76px); line-height:1.04; letter-spacing:-3px; margin:25px 0 18px; font-weight:900; }
+    h1 .gold { background:linear-gradient(100deg,#fff2c8 5%,#dcae52 48%,#fff0bd 90%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .lead { max-width:660px; margin:0 auto; color:var(--muted); font-size:clamp(15px,2vw,18px); line-height:1.8; }
+    .markets { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:30px auto 32px; }
+    .market { padding:10px 15px; border:1px solid rgba(255,255,255,.1); border-radius:9px; background:rgba(255,255,255,.035); color:#e6ebf4; font-size:11px; font-weight:800; letter-spacing:1.2px; }
+    .market b { color:var(--gold); margin-right:6px; }
+    .cta-row { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; }
+    .cta {
+      display:inline-flex; justify-content:center; align-items:center; gap:12px; min-height:57px;
+      padding:0 27px; border-radius:12px; text-decoration:none; color:#10131a; font-weight:900;
+      font-size:13px; letter-spacing:1.1px; background:linear-gradient(110deg,#f8e4a8,#d6a747 55%,#f5d98d);
+      box-shadow:0 10px 35px rgba(213,166,71,.2); transition:transform .25s, box-shadow .25s;
+    }
+    .cta:hover { transform:translateY(-3px); box-shadow:0 14px 42px rgba(213,166,71,.34); }
+    .cta svg { width:19px; height:19px; }
+    .secondary { color:#dce6f5; text-decoration:none; border:1px solid rgba(255,255,255,.15); padding:17px 22px; border-radius:12px; font-size:12px; font-weight:750; }
+    .note { color:#7f8da4; font-size:11px; margin-top:15px; }
+    .chart-card {
+      max-width:850px; margin:60px auto 0; padding:22px; border:1px solid rgba(126,164,211,.18);
+      border-radius:20px; background:linear-gradient(145deg,rgba(19,32,54,.88),rgba(9,15,27,.9));
+      box-shadow:0 25px 80px rgba(0,0,0,.28); overflow:hidden; position:relative;
+    }
+    .chart-card::after { content:""; position:absolute; width:240px; height:240px; right:-110px; top:-130px; border-radius:50%; background:rgba(76,157,255,.12); filter:blur(30px); }
+    .chart-head { display:flex; justify-content:space-between; align-items:center; gap:12px; color:#dce5f3; font-size:11px; letter-spacing:1.2px; font-weight:800; }
+    .chart-head span:last-child { color:#91a2ba; font-weight:600; letter-spacing:.4px; }
+    .chart { height:155px; margin-top:17px; position:relative; border-bottom:1px solid rgba(255,255,255,.1); background:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,rgba(255,255,255,.055) 38px); }
+    .chart svg { width:100%; height:100%; overflow:visible; }
+    .features { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; margin-top:25px; }
+    .feature { border:1px solid rgba(255,255,255,.09); border-radius:13px; padding:18px 15px; background:rgba(255,255,255,.025); text-align:left; }
+    .feature .num { color:var(--gold); font-size:10px; letter-spacing:1px; font-weight:900; }
+    .feature h3 { margin:10px 0 7px; font-size:13px; }
+    .feature p { margin:0; color:var(--muted); font-size:11px; line-height:1.65; }
+    .disclaimer { margin:28px auto 0; max-width:850px; padding:16px 18px; border-left:2px solid var(--gold); background:rgba(231,189,103,.045); color:#9da9bb; font-size:11px; line-height:1.75; text-align:left; }
+    footer { border-top:1px solid rgba(255,255,255,.08); padding:22px 0 30px; color:#7f8da4; font-size:11px; }
+    .foot { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; }
+    footer a { color:#c5d0df; text-decoration:none; }
+    .links { display:flex; gap:16px; flex-wrap:wrap; }
+    .reveal { opacity:0; transform:translateY(18px); animation: rise .8s ease forwards; }
+    .delay1 { animation-delay:.12s; } .delay2 { animation-delay:.24s; } .delay3 { animation-delay:.36s; }
+    @keyframes rise { to { opacity:1; transform:translateY(0); } }
+    @keyframes glow { 0%,100% { box-shadow:0 0 18px rgba(231,189,103,.1); } 50% { box-shadow:0 0 30px rgba(231,189,103,.3); } }
+    @media (max-width:760px) {
+      header { padding:18px 0; } .top-tag { display:none; } main { padding:40px 0 52px; }
+      h1 { letter-spacing:-1.8px; } .chart-card { margin-top:43px; padding:17px; }
+      .features { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:420px) {
+      .wrap { width:min(100% - 28px,1120px); } .status { font-size:9px; padding:8px 9px; }
+      .brand-name { font-size:11px; } .logo { width:38px; height:38px; }
+      .cta { width:100%; padding:0 14px; } .secondary { width:100%; text-align:center; }
+      .features { gap:9px; } .feature { padding:14px 12px; }
+      .chart { height:120px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#" aria-label="MCX Commodity Official home">
+        <div class="logo">MCX</div>
+        <div class="brand-name">MCX COMMODITY<br><span>OFFICIAL™</span></div>
+      </a>
+      <div class="top-tag">Research · Insights · Discipline</div>
+      <div class="status"><i></i> MARKET RESEARCH</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow reveal">COMMODITY MARKET RESEARCH</div>
+        <h1 class="reveal delay1">CLARITY IN<br><span class="gold">COMMODITY MARKETS.</span></h1>
+        <p class="lead reveal delay2">Independent-minded market research, technical observations and relevant updates across key MCX commodity segments.</p>
+
+        <div class="markets reveal delay2" aria-label="Market coverage">
+          <div class="market"><b>◆</b> CRUDE OIL</div>
+          <div class="market"><b>◆</b> NATURAL GAS</div>
+          <div class="market"><b>◆</b> GOLD</div>
+          <div class="market"><b>◆</b> SILVER</div>
+          <div class="market"><b>◆</b> COPPER</div>
+        </div>
+
+        <div class="cta-row reveal delay3">
+          <!-- Replace the URL below with your actual Telegram channel invite/link. -->
+          <a class="cta" href="https://t.me/+_JHjsDDFl8NlMjc9" target="_blank" rel="noopener noreferrer">
+            VISIT OUR TELEGRAM CHANNEL
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 3 3.8 9.7c-1.1.4-1.1 1.9.1 2.3l4.4 1.5 1.5 4.5c.4 1.1 1.9 1.2 2.4.1L21 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.3 13.5 8.1-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </a>
+          <a class="secondary" href="#research">OUR RESEARCH APPROACH</a>
+        </div>
+        <div class="note">Research and information are not a promise of performance or returns.</div>
+      </section>
+
+      <section class="chart-card reveal delay3" id="research">
+        <div class="chart-head"><span>A RESEARCH-LED APPROACH</span><span>Illustrative visual · Not live market data</span></div>
+        <div class="chart">
+          <svg viewBox="0 0 800 155" preserveAspectRatio="none" role="img" aria-label="Decorative illustrative market chart">
+            <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9dff" stop-opacity=".28"/><stop offset="1" stop-color="#4c9dff" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0 118 C35 110 45 125 78 103 S130 116 160 89 S210 98 245 76 S300 95 330 65 S390 82 420 54 S470 70 505 48 S560 63 590 34 S650 57 680 26 S745 42 800 12 L800 155 L0 155Z" fill="url(#area)"/>
+            <path d="M0 118 C35 110 45 125 78 103 S130 116 160 89 S210 98 245 76 S300 95 330 65 S390 82 420 54 S470 70 505 48 S560 63 590 34 S650 57 680 26 S745 42 800 12" fill="none" stroke="#6bb5ff" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+            <path d="M0 137 C100 130 145 141 235 119 S370 126 455 108 S590 119 680 91 S750 100 800 83" fill="none" stroke="#d9ad58" stroke-width="1.5" stroke-dasharray="5 7" opacity=".8" vector-effect="non-scaling-stroke"/>
+          </svg>
+        </div>
+      </section>
+
+      <section class="features" aria-label="Our research approach">
+        <article class="feature"><div class="num">01 / RESEARCH</div><h3>Market Analysis</h3><p>Technical observations and commodity market research.</p></article>
+        <article class="feature"><div class="num">02 / INSIGHTS</div><h3>Market Updates</h3><p>Relevant developments across selected MCX commodities.</p></article>
+        <article class="feature"><div class="num">03 / DISCIPLINE</div><h3>Risk Awareness</h3><p>Understand stop-loss planning and position-sizing basics.</p></article>
+        <article class="feature"><div class="num">04 / LEARNING</div><h3>Trading Education</h3><p>Build a structured approach to understanding markets.</p></article>
+      </section>
+
+      <div class="disclaimer" id="risk-disclaimer">
+        <strong style="color:#e7bd67">IMPORTANT RISK DISCLOSURE:</strong>
+        Commodity derivatives trading involves substantial risk and may not be suitable for every investor. You may lose some or all of your invested capital. Past performance does not guarantee future results. Any market information is general in nature and should not be treated as a guarantee of returns. Please assess your financial situation and understand the risks before trading.
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> MCX COMMODITY OFFICIAL™. All rights reserved.</div>
+        <div class="links">
+          <a href="#research">About</a>
+          <a href="#risk-disclaimer">Risk Disclosure</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
